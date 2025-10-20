@@ -1,16 +1,21 @@
-const CACHE_NAME = "moovie-cache-v1";
-const ASSETS = [
-  "./",
-  "./index.html",
-  "./styles.css",
-  "./script.js",
-  "./manifest.json"
-];
-
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
+  e.waitUntil(
+    caches.open("moovie-cache").then(cache => {
+      return cache.addAll([
+        "./",
+        "index.html",
+        "style.css",
+        "script.js",
+        "manifest.json",
+        "icons/icon-192.png",
+        "icons/icon-512.png"
+      ]);
+    })
+  );
 });
 
 self.addEventListener("fetch", e => {
-  e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));
+  e.respondWith(
+    caches.match(e.request).then(response => response || fetch(e.request))
+  );
 });
