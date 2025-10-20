@@ -1,0 +1,14 @@
+{
+  "name": "Moovie",
+  "short_name": "Moovie",
+  "description": "App con fondo degradado morado neón",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#2a0237",
+  "theme_color": "#5b0b8a",
+  "orientation": "portrait",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

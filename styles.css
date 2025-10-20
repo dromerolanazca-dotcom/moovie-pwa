@@ -1,0 +1,35 @@
+/* Fondo degradado morado neón */
+:root{
+  --bg1: #2a0237;
+  --bg2: #5b0b8a;
+  --accent: #ff3bd6;
+}
+body{
+  margin:0;
+  height:100vh;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  background-size:400% 400%;
+  animation:gradientShift 10s ease infinite;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+button{
+  background:var(--accent);
+  border:none;
+  border-radius:8px;
+  padding:10px 20px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 0 15px rgba(255,59,214,0.5);
+}

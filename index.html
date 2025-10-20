@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moovie — Degradado Morado Neón</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#5b0b8a">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">MOOVIE</div>
+    <div class="user">Usuario: <span id="username">Invitado</span></div>
+  </header>
+
+  <main class="card">
+    <h1>Bienvenido a Moovie</h1>
+    <p>App con fondo <strong>degradado morado neón</strong></p>
+
+    <label class="input-label">
+      Nombre de usuario
+      <input id="inputName" placeholder="Escribe tu nombre">
+    </label>
+
+    <button id="applyBtn">Aplicar nombre</button>
+    <p class="note">PWA lista para instalar 💜</p>
+  </main>
+
+  <footer class="footer">
+    © Moovie — diseño con degradado morado neón
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+  </script>
+</body>
+</html>
