@@ -1,26 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const nombreUsuario = document.getElementById("nombre-usuario");
-  const input = document.getElementById("nombre");
-  const boton = document.getElementById("aplicar");
-
-  // Guardar nombre
-  boton.addEventListener("click", () => {
-    const nombre = input.value.trim();
-    if (nombre) {
-      localStorage.setItem("usuario", nombre);
-      nombreUsuario.textContent = nombre;
-      input.value = "";
+{
+  "name": "Moovie",
+  "short_name": "Moovie",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#2e005c",
+  "theme_color": "#7b00ff",
+  "description": "App con fondo degradado morado neón",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  });
-
-  // Cargar nombre guardado
-  const guardado = localStorage.getItem("usuario");
-  if (guardado) {
-    nombreUsuario.textContent = guardado;
-  }
-
-  // Registrar Service Worker
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-  }
-});
+  ]
+}
