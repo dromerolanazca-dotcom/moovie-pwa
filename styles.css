@@ -1,35 +1,54 @@
-/* Fondo degradado morado neón */
-:root{
-  --bg1: #2a0237;
-  --bg2: #5b0b8a;
-  --accent: #ff3bd6;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #2e005c, #7b00ff);
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body{
-  margin:0;
-  height:100vh;
-  font-family:Poppins,sans-serif;
-  background:linear-gradient(135deg,var(--bg1),var(--bg2));
-  background-size:400% 400%;
-  animation:gradientShift 10s ease infinite;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+
+.container {
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
 }
-@keyframes gradientShift{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-button{
-  background:var(--accent);
-  border:none;
-  border-radius:8px;
-  padding:10px 20px;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  box-shadow:0 0 15px rgba(255,59,214,0.5);
+
+button {
+  background: #ff00c8;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff33d4;
+}
+
+input {
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
